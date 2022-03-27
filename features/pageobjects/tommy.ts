@@ -41,6 +41,18 @@ class TommyPage
             }
     }
 
+    public async DeleteAddress(){
+    
+            
+        let deletebutton=await (await this.datatestid("address-delete-button")).isExisting()
+        if(deletebutton==true){
+            
+            await (await this.datatestid("address-delete-button")).click()
+        }
+}
+
+    
+
     public async Login(email:string,password:string){
     
             await (await this.id("signin-email")).setValue(email)

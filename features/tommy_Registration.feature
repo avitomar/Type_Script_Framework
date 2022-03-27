@@ -23,7 +23,7 @@ Feature: Registration Process of Tommy.nl
 
     @UpdateUserAddress
     Scenario Outline: Exisiting user wants to add new address in addressbook
-        When user login to the application using "testing.test1237@gmail.com " and "Testing1"
+        When user login to the application using "testing.test1237@gmail.com" and "Testing1"
         Then user will be redirected to home page and Validate with Accout icon as "HOI!"
         Then user open "Adresboek" to add new adresss
         Then user click on "VOEG NIEUW ADRES TOE" to Add new adresss

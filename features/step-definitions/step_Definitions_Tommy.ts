@@ -1,4 +1,4 @@
-import {Given,Then,When} from '@cucumber/cucumber'
+import {Given,Then,When} from '@wdio/cucumber-framework'
 import { getTsBuildInfoEmitOutputFilePath } from 'typescript';
 import Tommypage from '../pageobjects/tommy'
 import Utility from '../Utilities/Utility'
@@ -12,7 +12,7 @@ Given(/^User launch the browser and load the url \"([^\"]*)\"$/, async function 
     
     await browser.url(app_url)
     await browser.maximizeWindow()
-    await browser.pause(2000)
+    await browser.pause(10000)
     
     let acceptcookiebtn= await(Tommypage.acceptcookie).isExisting()
     if(acceptcookiebtn==true){
@@ -129,7 +129,8 @@ Then(/^user open \"([^\"]*)\" to add new adresss$/, async function (addressbook)
 
 Then(/^user click on \"([^\"]*)\" to Add new adresss$/, async function (newadressbutton) {
   
-    
+    await Tommypage.DeleteAddress()
+
     await((await Tommypage.datatestid("address-add-button")).click())
     await expect (Tommypage.selector("address-new__header")).toHaveText(newadressbutton)
     
@@ -158,7 +159,7 @@ Then(/^user validate the adress is added in Addressbook with (.+)$/, async funct
     await expect((await Tommypage.datatestid("address-book-select")).isExisting)
 
     //Deleting Address to re-test with same data.
-    await ((await Tommypage.datatestid("address-delete-button")).click())
+    await Tommypage.DeleteAddress()
 
   });
 
