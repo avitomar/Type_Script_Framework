@@ -3,7 +3,9 @@ Please read below how to execute the scripts.
 
 # Cloning the git repository to your local
 Clone repository to you local : 
+
 SSH : git@github.com:avitomar/Iovio_TestAssement_Atomar.git
+
 HTTPS: https://github.com/avitomar/Iovio_TestAssement_Atomar.git
 
 # Build Project
