@@ -5,7 +5,7 @@ Please read below how to execute the scripts.
 
 
 # Build Project
-1. Go to project folder */Iovio_TestAssement_Atomar/
+1. Go to project folder 
 2. rum commnd : npm install
 
 # Start test execution
@@ -17,7 +17,7 @@ Option
 3. To run add address Scenario, use tag @UpdateUserAddress
 
 --Test Execution:
-1. Go to project folder */Iovio_TestAssement_Atomar/
+1. Go to project folder 
 2. Run Command : npm test -- --cucumberOpts.tagExpression='{test_tag}'
 
 Example: 
